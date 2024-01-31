@@ -1,0 +1,19 @@
+{
+  "name": "agroweb",
+  "version": "0.0.0",
+  "description": "pagina web para una agropecuaria :D",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app"
+  },
+  "author": "tony & lexiles",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-TonyM/AgroWeb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dev-TonyM/AgroWeb/issues"
+  },
+  "homepage": "https://github.com/Dev-TonyM/AgroWeb#readme"
+}
