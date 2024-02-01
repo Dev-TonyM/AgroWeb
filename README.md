@@ -11,9 +11,10 @@
         <li>-ponele asi que se deslize pa un lao todo fino</li>
         <li>-hacer un footer to calidad con nombres correos ubicaciones</li>
         <li>-separarlos por categoria</li>
+        <li>culo culo culo y más culo</li>
     </ul>
         
-    culo culo culi
+
 </p>
 
 
