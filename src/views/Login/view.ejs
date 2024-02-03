@@ -1,3 +1,11 @@
 <%- include('../header') %>
-<p> MAMALO TONYY !!!!</p>
+<form method="post" action="../index">
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Username" name="user" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Password" name="psw" required>
+        <button type="submit">Login</button>
+      </div>
+</form>
 <%- include('../footer') %>
