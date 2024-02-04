@@ -1,0 +1,15 @@
+<%- include('../header') %>
+<form method="post" action="/registro/new">
+    <div class="container">
+        <label for="###"><b>Nombre</b></label>
+        <input type="text" placeholder="Nombre" name="name">
+        <label for="###"><b>Apellido</b></label>
+        <input type="text" placeholder="Apellido" name="lastname">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Username" name="user" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Password" name="psw" required>
+        <button type="submit">Login</button>
+      </div>
+</form>
+<%- include('../footer') %>
