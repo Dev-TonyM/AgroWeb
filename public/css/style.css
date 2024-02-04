@@ -27,14 +27,18 @@ header{
     padding: 30px 0 40px 0;
 }
 
-/* Main*/
 
+
+
+
+
+/* Main*/
 .container-items{
+    margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
-
 
 .items{
     border-radius: 15px;
@@ -80,4 +84,103 @@ header{
     color: #000000;
     padding: 15px 10px;
     cursor: pointer;
+}
+
+
+
+/* Barra de navegacion */
+nav{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: 100px;
+    background-color: #242526;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+nav .Logo{
+   float: left;
+   width: 40%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   font-size: 30px;
+   color: #ffffffff;
+   font-weight: bold;
+   text-transform: uppercase;
+   list-style: none;
+}
+
+nav .list{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .list{
+    list-style: none;
+}
+
+nav .list a {
+    display: block;
+    text-transform:uppercase;
+    list-style: none;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffffff;
+    text-decoration: none;
+    line-height:50px;
+    letter-spacing: 3px;
+}
+
+nav .list a:hover{
+    border-bottom: 4px solid #675bf9;
+}
+
+
+
+
+/* Footer */
+
+footer{
+    background-color: #04213e;
+    color: #ffffffff;
+    text-decoration: none;
+    padding: 0 5%;
+    height: 100px;
+    background-color: #242526;
+    margin-bottom: 20px;
+}
+
+footer .lado-izquierdo{
+
+    float: left;
+}
+
+footer .lado-derecho{
+
+    float: right;
+}
+
+footer .lado-derecho .redes{
+    float: right;
+}
+
+footer .lado-derecho .creadores{
+    float: left;
+    margin-right: 50px;
+}
+
+footer li{
+    list-style: none;
 }
