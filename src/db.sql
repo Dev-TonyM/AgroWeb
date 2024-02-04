@@ -15,8 +15,8 @@ CREATE TABLE categorias (
 );
 CREATE TABLE users (
   id int PRIMARY KEY AUTO_INCREMENT,
-  user varchar(24) NOT NULL,
-  pass varchar(32) NOT NULL,
+  user varchar(32) NOT NULL,
+  pass varchar(256) NOT NULL,
   nombre varchar(64) NOT NULL,
   apellido varchar(64) NOT NULL,
   tipoU_id int NOT NULL

@@ -47,6 +47,6 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 
 //servidor en escucha
-app.listen(puerto, () => {
+app.listen(process.env.puerto, () => {
     console.log('Servidor en espera')
   });
