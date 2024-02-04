@@ -16,6 +16,7 @@ app.use("/icons",express.static("./node_modules/bootstrap-icons"));
 app.use((req,res)=>{
   res.sendFile(path.join(__dirname,'../public/html/404.html'));
 });
+
 app.use(express.urlencoded({extended: false}));
 
 //servidor en escucha
