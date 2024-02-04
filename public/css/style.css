@@ -17,8 +17,7 @@
 }
 
 body{
-    max-width: 1200px;
-    margin: 0 auto;
+
     color: #333;
 }
 img{
@@ -30,11 +29,12 @@ header{
     padding: 30px 0 40px 0;
 }
 
-.fondoagroven{
-    position: center center;
-    z-index: -2;
-    opacity: 60%;
-    display: flex;
+#main{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-attachment: fixed;
+    background-size: cover;
 
 }
 
@@ -44,15 +44,17 @@ header{
 
 /* Main*/
 .container-items{
-    margin-top: 140px;
+    margin-top: 90px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 35px;
+
 }
 
 .items{
     border-radius: 15px;
+    background-color: #ffffff;
 }
 
 .items:hover{
@@ -81,6 +83,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 }
 
 .price{
@@ -172,10 +175,10 @@ footer{
     background-color: #04213e;
     color: #ffffffff;
     text-decoration: none;
-    padding: 0 15%;
+    padding: 3px 15%;
     height: 130px;
     background-color: #242526;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     z-index: 10;
 
 }
@@ -211,4 +214,9 @@ footer li{
     text-decoration: none;
     color: #ffffffff;
     
+}
+
+.culo{
+    text-decoration: none;
+    color: #ffffffff;
 }
