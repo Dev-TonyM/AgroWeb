@@ -2,6 +2,17 @@ const express = require('express')
 const app = express()
 const path = require('path')
 
+
+//rutas
+const routeindex = require('./routes/index');
+app.use ('/', routeindex);
+
+
+
+
+
+
+
 // motor de vistas
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
