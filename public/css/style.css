@@ -94,7 +94,7 @@ header{
 .info-producto button{
     border-radius: 30px;
     background-color: rgb(0, 0, 0);
-    background: none;
+    background:#76ff69;
     color: #000000;
     padding: 15px 10px;
     cursor: pointer;
@@ -175,7 +175,7 @@ footer{
     background-color: #04213e;
     color: #ffffffff;
     text-decoration: none;
-    padding: 3px 15%;
+    padding: 3px 10%;
     height: 130px;
     background-color: #242526;
     margin-bottom: 0px;
@@ -199,7 +199,7 @@ footer .lado-derecho .redes{
 
 footer .lado-derecho .creadores{
     float: left;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 footer li{
@@ -211,7 +211,7 @@ footer li{
     height: 30px;
 }
 .redesgit{
-    text-decoration: none;
+
     color: #ffffffff;
     
 }
