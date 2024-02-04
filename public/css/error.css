@@ -1,21 +1,11 @@
 body{
     background-color: #ffffff;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 50vh;
     flex-direction: column;
-    color: #0b0b0b;
-    font-family: sans-sherif;
-}
-h1{
-    font-size: 4rem;
-    margin-top: 129px;
-    margin-bottom: 20px;
-    margin: center;
-    justify-content: center;
 }
 a{
     text-decoration: none;
