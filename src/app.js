@@ -39,7 +39,7 @@ app.use("/icons",express.static("./node_modules/bootstrap-icons"));
 
 //aca le digo donde esta el error 404
 app.use((req,res)=>{
-  res.sendFile(path.join(__dirname,'../public/html/404.html'));
+  res.sendFile(path.join(__dirname,'../public/html/error.html'));
 });
 
 //aca es para poder sacar valores del formulario
