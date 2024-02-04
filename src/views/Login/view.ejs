@@ -1,11 +1,18 @@
 <%- include('../header') %>
-<form method="post" action="/Login/new">
+<form method="post" action="../index">
     <div class="container">
-        <label for="uname"><b>Username</b></label>
+        <label for="user"><b>Username</b></label>
         <input type="text" placeholder="Username" name="user" required>
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Password" name="psw" required>
         <button type="submit">Login</button>
-      </div>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> 
+        </label>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="btn-cancel">Cancelar</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
 </form>
 <%- include('../footer') %>
