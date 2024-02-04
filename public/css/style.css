@@ -8,6 +8,9 @@
     width: 175px;
 }
 
+.logo-empresa{
+    width: 270px;
+}
 
 .GitHub{
     width: 25px;
@@ -128,6 +131,7 @@ nav .list{
 
 nav .list{
     list-style: none;
+    margin-left: 25%;
 }
 
 nav .list a {
@@ -139,7 +143,7 @@ nav .list a {
     font-weight: bold;
     color: #ffffffff;
     text-decoration: none;
-    line-height:50px;
+    line-height:30px;
     letter-spacing: 3px;
 }
 
@@ -160,6 +164,8 @@ footer{
     height: 100px;
     background-color: #242526;
     margin-bottom: 20px;
+    z-index: 10;
+
 }
 
 footer .lado-izquierdo{
@@ -183,4 +189,14 @@ footer .lado-derecho .creadores{
 
 footer li{
     list-style: none;
+}
+
+.GitHub{
+    width: 30px;
+    height: 30px;
+}
+.redesgit{
+    text-decoration: none;
+    color: #ffffffff;
+    
 }
