@@ -4,7 +4,8 @@
   "description": "pagina web para una agropecuaria :D",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "author": "tony & lexiles",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.18.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^3.0.3"
   }
 }

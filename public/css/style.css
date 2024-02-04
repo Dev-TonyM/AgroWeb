@@ -37,10 +37,11 @@ header{
 
 /* Main*/
 .container-items{
-    margin-top: 70px;
+    margin-top: 140px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 30px;
+    position: absolute;
 }
 
 .items{
@@ -131,7 +132,11 @@ nav .list{
 
 nav .list{
     list-style: none;
-    margin-left: 25%;
+    margin-left: 40%;
+}
+
+nav li{
+    padding-inline: 20px;
 }
 
 nav .list a {
