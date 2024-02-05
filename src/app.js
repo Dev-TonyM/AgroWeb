@@ -10,6 +10,10 @@ dotenv.config({path:path.join(__dirname,'./env/.env')});
 //encriptador de contraseñas
 const bcryptjs = require('bcryptjs') ;
 
+//aca es para poder sacar valores del formulario
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 //rutas
 const routeindex = require('./routes/index');
 const routelogin = require('./routes/login.route');
@@ -18,8 +22,10 @@ app.use ('/', routeindex);
 app.use ('/',routeRegister);
 app.use ('/',routelogin);
 
+
 const routeinventario = require('./routes/inventario.route');
 app.use ('/inventario', routeinventario);
+
 
 
 //sesiones
@@ -50,9 +56,7 @@ app.use((req,res)=>{
   res.sendFile(path.join(__dirname,'../public/html/error.html'));
 });
 
-//aca es para poder sacar valores del formulario
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
+
 
 
 //servidor en escucha

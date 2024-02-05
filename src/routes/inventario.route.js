@@ -20,8 +20,8 @@ router.post('/agregar', (req,res)=> {
     if (!nombre || !precio || !categoria || !marca || !stock) {
         return res.status(500).send('Todos los campos son obligatorios');
     }
-    inventario.insertar_inventario(codigo, nombre, precio, categoria, marca, stock).then(() => {
-        res.redirect('/inventario/add');
+    inventario.insertar_inventario(codigo, nombre, precio, categoria, marca, stock).then((idProductoInsert) => {
+        res.redirect('/inventario');
     })
     .catch(err => {
         return res.status(500).send('Error en los productos agregar');

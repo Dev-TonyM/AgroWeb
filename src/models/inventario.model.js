@@ -10,7 +10,7 @@ const inventario = {
     },
 
     insertar_inventario(codigo, nombre, precio, categoria, marca, stock) {
-        return new promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             conexion.query('insert into producto (codigo, nombre, precio, categoria_id, marca, cantidad) values (?, ?, ?, ?, ?, ?)',[codigo, nombre,precio, categoria, marca, stock], (err, resultados) => {
                 if (err) reject(err);
                 else resolve(resultados.insertId);
@@ -28,7 +28,7 @@ const inventario = {
     },
 
     borrar_inventario(id) {
-        return new promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             conexion.query('delete from producto where id=?', [id], (err) => {
                 if (err) reject(err);
                 else resolve();
@@ -37,7 +37,7 @@ const inventario = {
     },
 
     buscar_inventario(codigo) {
-        return new promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             conexion.query('select producto.id, producto.codigo, producto.nombre, producto.precio, categorias.nombre as categoria, producto.marca, producto.cantidad from producto join categorias on categorias.id = producto.categoria_id where producto.codigo = ?', [codigo], (err, resultados) => {
                 if (err) reject(err);
                 else resolve(resultados[0]);
