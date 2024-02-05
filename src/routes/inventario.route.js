@@ -20,8 +20,8 @@ router.post('/agregar', (req,res)=> {
     if (!nombre || !precio || !categoria || !marca || !stock) {
         return res.status(500).send('Todos los campos son obligatorios');
     }
-    inventario.insertar_inventario(codigo, nombre, precio, categoria, marca, stock).then(() => {
-        res.redirect('/inventario/add');
+    inventario.insertar_inventario(codigo, nombre, precio, categoria, marca, stock).then((idProductoInsert) => {
+        res.redirect('/inventario');
     })
     .catch(err => {
         return res.status(500).send('Error en los productos agregar');
@@ -39,35 +39,48 @@ router.get('/eliminar/:id', function(req,res) {
 })
 
 //Buscar
-router.get('/buscar/:id', function(req,res) {
+// router.get('/buscar/:id', function(req,res) {
+//     inventario.buscar_inventario(req.params.id).then(producto => {
+//         if(producto) {
+//             res.render('inventario/editar', { producto: producto });
+//         }
+//         else{
+//             return res.status(500).send('No hay producto con ese codigo');
+//         }
+//     })
+//     .catch(err => {
+//         return res.status(500).send('Error en los productos buscar');
+//     });
+// });
+
+// //Editar
+router.get('/editar/:id', function(req,res) {
     inventario.buscar_inventario(req.params.id).then(producto => {
-        if(producto) {
-            res.render('inventario/editar', { producto: producto });
-        }
-        else{
-            return res.status(500).send('No hay producto con ese codigo');
-        }
+        console.log(producto);
+        res.render('inventario/edit', {producto: producto});
     })
     .catch(err => {
-        return res.status(500).send('Error en los productos buscar');
-    });
-});
+        console.log(err);
+        return res.status(500).send('Error en los productos editar');
+    })
+})
 
-//Editar
 router.post('/editar/', function(req,res) {
-    const {nombre, precio, categoria, marca, stock} = req.body;
-    if(!nombre || !precio || !categoria || !marca || !stock) {
-        return res.status(500).send('Datos insuficientes');
-    }
-    inventario.modificar_inventario(nombre, precio, categoria, marca, stock).then(() => {
+    const {id, codigo, nombre, precio, categoria, marca, stock} = req.body;
+    console.log(id, codigo, nombre,precio, categoria, marca, stock)
+    inventario.modificar_inventario(id, codigo, nombre,precio, categoria, marca, stock).then(() => {
         res.redirect('/inventario');
     })
     .catch(err => {
-        return res.status(500).send('Error en los productos modificar');
-    });
-});
+        return res.status(500).send('Error en los productos editar');
+    })
+})
 
 router.get('/add', (req,res)=> {
     res.render('inventario/add');
 });
+
 module.exports = router;
+
+
+

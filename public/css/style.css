@@ -219,6 +219,17 @@ footer li{
 
 .container-inventario{
    margin-top: 130px;
-   padding: 45px;
+   padding: 50px;
    text-align: center;
+}
+
+.container-agregar{
+    margin-top: 60px;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+label{
+    float: left;
 }

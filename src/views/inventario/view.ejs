@@ -24,14 +24,14 @@
                 <td><%= productos.codigo %></td>
                 <td><%= productos.nombre %></td>
                 <td><%= productos.precio %></td>
-                <td><%= productos.nombre %></td>
+                <td><%= productos.categoria %></td>
                 <td><%= productos.marca %></td>
-                <td><%= productos.stock %></td>
+                <td><%= productos.cantidad %></td>
                 <td>
-                    <a href="/inventario/editar/<%= productos.id %> class='btn btn-warning">Editar</a>
+                    <a href="/inventario/editar/<%= productos.id %>">Editar</a>
                 </td>
                 <td>
-                    <a href="/inventario/borrar/<%= productos.id %>">Borrar</a>
+                    <a href="/inventario/eliminar/<%= productos.id %>">Borrar</a>
                 </td>
             </tr>
             <% }) %>

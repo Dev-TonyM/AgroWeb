@@ -7,11 +7,14 @@ const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config({path:path.join(__dirname,'./env/.env')});
 
+//aca es para poder sacar valores del formulario
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+
+
 //encriptador de contraseñas
 const bcryptjs = require('bcryptjs') ;
-//pa que pase el body
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+
 //rutas
 const routeinventario = require('./routes/inventario.route');
 const routeindex = require('./routes/index');
@@ -20,9 +23,10 @@ const routeRegister = require('./routes/register.route');
 app.use ('/', routeindex);
 app.use ('/',routeRegister);
 app.use ('/',routelogin);
-app.use ('/inventario', routeinventario);
-const conexion = require('./db');
 
+
+const routeinventario = require('./routes/inventario.route');
+app.use ('/inventario', routeinventario);
 
 
 //sesiones
@@ -52,6 +56,7 @@ app.use("/icons",express.static("./node_modules/bootstrap-icons"));
 app.use((req,res)=>{
   res.sendFile(path.join(__dirname,'../public/html/error.html'));
 });
+
 //servidor en escucha
 app.listen(process.env.PORT, () => {
     console.log('servidor en espera')

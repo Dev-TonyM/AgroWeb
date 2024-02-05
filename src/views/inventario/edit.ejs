@@ -1,0 +1,39 @@
+ 
+
+<div class="container-agregar">
+    <h1>Editar producto</h1>
+    <form action="/inventario/editar" method="POST">
+        <!-- <% producto.forEach(inventario => { %> -->
+        <input type="hidden" name="id" value="<%= producto.id %>">
+        <div class="form-group">
+            <label for="codigo">Codigo</label>
+            <input type="text" id="codigo" name="codigo" class="form-control" value="<%= producto.codigo %>">
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" value="<%= producto.nombre %>" >
+        </div>
+        <div class="form-group">
+            <label for="precio">Precio</label>
+            <input type="text" id="precio" name="precio" class="form-control" value="<%= producto.precio %>" >
+        </div>
+        <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <input type="text" id="categoria" name="categoria" class="form-control" value="<%= producto.categoria %>" >
+        </div>s
+        <div class="form-group">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" class="form-control" value="<%= producto.marca %>" >
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock</label>
+            <input type="text" id="stock" name="stock" class="form-control" value="<%= producto.cantidad %>" >
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Guardar cambios</button>
+            <a href="/inventario" class="btn btn-primary">Volver</a>
+        </div>
+        <!-- <% }) %> -->
+    </form>
+    
+</div>
