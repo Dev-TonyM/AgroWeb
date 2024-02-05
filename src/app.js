@@ -20,6 +20,9 @@ app.use ('/', routeindex);
 app.use ('/',routeRegister);
 app.use ('/',routelogin);
 
+const routeinventario = require('./routes/inventario.route');
+app.use ('/inventario', routeinventario);
+
 
 //sesiones
 app.use(session({

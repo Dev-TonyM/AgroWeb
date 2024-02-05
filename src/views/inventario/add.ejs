@@ -1,6 +1,36 @@
 <%- include ('../header')%>
 
 <div class="container-inventario">
-    <h1>INVENTARIO</h1>
+    <h1>Agregar producto</h1>
+    <form action="/inventario/agregar" method="POST">
+        <div class="form-group">
+            <label for="codigo">Codigo</label>
+            <input type="text" id="codigo" name="codigo" class="form-control" placeholder="Codigo del producto">
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre del producto">
+        </div>
+        <div class="form-group">
+            <label for="precio">Precio"></label>
+            <input type="text" id="precio" name="precio" class="form-control" placeholder="Precio del producto">
+        </div>
+        <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <input type="text" id="categoria" name="categoria" class="form-control" placeholder="Categoria del producto">
+        </div>
+        <div class="form-group">
+            <label for="marca"></label>
+            <input type="text" id="marca" name="marca" class="form-control" placeholder="Marca del producto">
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock</label>
+            <input type="text" id="stock" name="stock" class="form-control" placeholder="Stock del producto">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-sucess">Agregar</button>
+            <a href="/inventario" class="btn btn-primary">Volver</a>
+        </div>
+    </form>
 </div>
 <%- include ('../footer')%>

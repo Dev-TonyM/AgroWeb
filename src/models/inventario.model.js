@@ -2,16 +2,16 @@ const conexion = require('../db');
 const inventario = {
     ver_inventario() {
         return new Promise((resolve, reject) => {
-            conexion.query('select agropecuaria.id, agropecuaria.codigo, agropecuaria.nombre, agropecuaria.precio, categorias.nombre as categoria, agropecuaria.marca, agropecuaria.stock from agropecuaria join categorias on categorias.id = agropecuaria.categoria_id', (err,resultados) => {
+            conexion.query('select producto.id, producto.codigo, producto.nombre, producto.precio, categorias.nombre as categoria, producto.marca, producto.cantidad from producto join categorias on categorias.id = producto.categoria_id', (err,resultados) => {
                 if (err) reject(err);
                 else resolve(resultados);
             });
         });
     },
 
-    insertar_inventario(id, nombre, precio, categoria, marca, stock) {
+    insertar_inventario(codigo, nombre, precio, categoria, marca, stock) {
         return new promise((resolve, reject) => {
-            conexion.query('insert into agropecuaria (id, nombre, precio, categoria_id, marca, stock) values (?, ?, ?, ?, ?, ?)',[id, nombre,precio, categoria, marca, stock], (err, resultados) => {
+            conexion.query('insert into producto (codigo, nombre, precio, categoria_id, marca, cantidad) values (?, ?, ?, ?, ?, ?)',[codigo, nombre,precio, categoria, marca, stock], (err, resultados) => {
                 if (err) reject(err);
                 else resolve(resultados.insertId);
             });
@@ -20,7 +20,7 @@ const inventario = {
 
     modificar_inventario(id, nombre, precio, categoria, marca, stock) {
         return new Promise((resolve, reject) => {
-            conexion.query('update agropecuaria set nombre = ?, precio = ?, categoria_id = ?, marca = ?, stock = ? where id = ?', [nombre, precio, categoria, marca, stock, id], (err, resultados) => {
+            conexion.query('update producto set nombre = ?, precio = ?, categoria_id = ?, marca = ?, cantidad = ? where id = ?', [nombre, precio, categoria, marca, stock, id], (err, resultados) => {
                 if (err) reject(err);
                 else resolve();
             });
@@ -29,7 +29,7 @@ const inventario = {
 
     borrar_inventario(id) {
         return new promise((resolve, reject) => {
-            conexion.query('delete from agropecuaria where id=?', [id], (err) => {
+            conexion.query('delete from producto where id=?', [id], (err) => {
                 if (err) reject(err);
                 else resolve();
             });
@@ -38,9 +38,9 @@ const inventario = {
 
     buscar_inventario(codigo) {
         return new promise((resolve, reject) => {
-            conexion.query('select agropecuaria.id, agropecuaria.codigo, agropecuaria.nombre, agropecuaria.precio, categorias.nombre as categoria, agropecuaria.marca, agropecuaria.stock from agropecuaria join categorias on categorias.id = agropecuaria.categoria_id where agropecuaria.codigo = ?', [codigo], (err, resultados) => {
+            conexion.query('select producto.id, producto.codigo, producto.nombre, producto.precio, categorias.nombre as categoria, producto.marca, producto.cantidad from producto join categorias on categorias.id = producto.categoria_id where producto.codigo = ?', [codigo], (err, resultados) => {
                 if (err) reject(err);
-                else resolve(resultado[0]);
+                else resolve(resultados[0]);
             });
         });
     }    
