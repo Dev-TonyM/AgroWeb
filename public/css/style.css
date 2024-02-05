@@ -49,7 +49,6 @@ header{
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 35px;
-
 }
 
 .items{
@@ -86,8 +85,8 @@ header{
 
 }
 
-.price{
-    font-size: 10px;
+.precio{
+    font-size: 20px;
     font-weight: 900;
 }
 
@@ -175,22 +174,22 @@ footer{
     background-color: #04213e;
     color: #ffffffff;
     text-decoration: none;
-    padding: 3px 10%;
-    height: 130px;
+    position: absolute;
     background-color: #242526;
-    margin-bottom: 0px;
-    z-index: 10;
-
+    width: 100%;
+    
 }
 
 footer .lado-izquierdo{
 
     float: left;
+    margin-left: 7%;
 }
 
 footer .lado-derecho{
 
     float: right;
+    margin-right: 7%;
 }
 
 footer .lado-derecho .redes{
@@ -205,7 +204,10 @@ footer .lado-derecho .creadores{
 footer li{
     list-style: none;
 }
-
+.culo{
+    text-decoration: none;
+    color: #ffffffff;
+}
 .GitHub{
     width: 30px;
     height: 30px;
@@ -216,7 +218,3 @@ footer li{
     
 }
 
-.culo{
-    text-decoration: none;
-    color: #ffffffff;
-}
