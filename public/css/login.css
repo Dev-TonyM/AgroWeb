@@ -38,8 +38,8 @@ input[type=text], input[type=password] {
 }
 
 .container {
-    margin-top:115px;
-    padding: 16px;
+    margin-top:100px;
+    padding: 30px;
     width: 100%;
 }
 .space {
