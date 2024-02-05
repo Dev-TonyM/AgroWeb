@@ -1,5 +1,5 @@
 create database agropecuaria;
-CREATE TABLE producto (
+CREATE TABLE productos (
   id int PRIMARY KEY AUTO_INCREMENT,
   nombre varchar(64),
   codigo int,
