@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 }
 
 .logo{
@@ -171,8 +171,7 @@ nav .list a:hover{
 
 footer{
     background-color: #242526;
-    position: sticky;
-    bottom: 0px;
+    position: absolute;
     color: #ffffffff;
     text-decoration: none;
     width: 100%;
@@ -189,6 +188,7 @@ footer .lado-derecho{
 
     float: right;
     margin-right: 7%;
+    margin-top: 15px;
 }
 
 footer .lado-derecho .redes{
