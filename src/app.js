@@ -13,15 +13,16 @@ const bcryptjs = require('bcryptjs') ;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //rutas
+const routeinventario = require('./routes/inventario.route');
 const routeindex = require('./routes/index');
 const routelogin = require('./routes/login.route');
 const routeRegister = require('./routes/register.route');
 app.use ('/', routeindex);
 app.use ('/',routeRegister);
 app.use ('/',routelogin);
-
-const routeinventario = require('./routes/inventario.route');
 app.use ('/inventario', routeinventario);
+const conexion = require('./db');
+
 
 
 //sesiones

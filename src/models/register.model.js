@@ -13,8 +13,10 @@ module.exports = {
         return new Promise((resolve, reject) => {
             conexion.query(`select users.user from users where user = ?`,
             [user], async(error, resultados)=>{
-                if(error) reject(error);
-                else resolve(resultados>0);
+                if(resultados.length > 0){
+                    if(error) reject(error);
+                    else resolve(resultados[0]);
+                }else{resolve(resultados)}
             })
         })
     }

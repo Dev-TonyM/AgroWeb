@@ -5,7 +5,7 @@
         <form method="post" action="/registro" class="formu">
             <div class="container">
                 <% if (error !=null) { %>
-                    <p><%= error %></p>
+                    <p style="color: red;"><%= error %></p>
                 <% } %>
                 <label for="nombre"><b>Nombre</b></label>
                 <input type="text" placeholder="Nombre" id="nombre" name="nombre" required>
