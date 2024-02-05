@@ -1,6 +1,6 @@
 .formu {
-    padding-top: 1px ;
-    border: 1rem transparent;
+    padding-top: 2.3rem ;
+    border: 1rem transparent; 
 }
 input[type=text], input[type=password] {
     width: 100%;
@@ -22,16 +22,46 @@ input[type=text], input[type=password] {
 .button-login:hover {
     background-color: #057049;
 }
-.cancelar {
-    width: auto;
-    padding: 10px 18px;
-    color: rgb(255, 255, 255);
-    background-color: #e43c30;
+button.button-register {
+    
+    background-color: #04AA6D;
+    color: rgb(253, 253, 253);
+    padding: 14px 20px;
     border: none;
+    cursor: pointer;
+    width: 50%;
+    display: inline-block;
 }
-.cancelar:hover {
-    background-color: #cf2418;
+button.button-register:hover {
+    background-color: #057049;
 }
+a.button-register{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 18px;
+    color: black;
+    border: none;
+    text-decoration: wavy,black;
+}
+a.button-register:hover {
+    color: #6e3df5;
+}
+.button-cancelar {
+    background-color: #a50210;
+    color: rgb(253, 253, 253);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 50%;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+.button-cancelar:hover {
+    background-color: #5f0109;
+}
+
 .container-img {
     text-align: center;
     margin: 24px 0 12px 0;
