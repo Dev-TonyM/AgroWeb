@@ -9,9 +9,9 @@ const inventario = {
         });
     },
 
-    insertar_inventario(id, nombre, precio, categoria, marca, stock) {
+    insertar_inventario(codigo, nombre, precio, categoria, marca, stock) {
         return new promise((resolve, reject) => {
-            conexion.query('insert into agropecuaria (id, nombre, precio, categoria_id, marca, stock) values (?, ?, ?, ?, ?, ?)',[id, nombre,precio, categoria, marca, stock], (err, resultados) => {
+            conexion.query('insert into agropecuaria (codigo, nombre, precio, categoria_id, marca, stock) values (?, ?, ?, ?, ?, ?)',[codigo, nombre,precio, categoria, marca, stock], (err, resultados) => {
                 if (err) reject(err);
                 else resolve(resultados.insertId);
             });
