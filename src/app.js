@@ -5,7 +5,7 @@ const path = require('path')
 
 //config del entorno
 const dotenv = require('dotenv')
-dotenv.config({path:'./env/.env'})
+dotenv.config({path:path.join(__dirname,'./env/.env')})
 
 //encriptador de contraseñas
 const bcryptjs = require('bcryptjs') 
@@ -47,6 +47,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 
 //servidor en escucha
-app.listen(process.env.puerto, () => {
-    console.log('Servidor en espera')
+app.listen(process.env.PORT, () => {
+    console.log('servidor en espera')
+    console.log('http://localhost:'+process.env.PORT)
   });
