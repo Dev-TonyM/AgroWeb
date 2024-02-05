@@ -176,9 +176,8 @@ footer{
     color: #ffffffff;
     text-decoration: none;
     width: 100%;
-    height: 8rem;
-    margin: 0px;
-    padding: 0px;
+    position: absolute;
+
 }
 
 footer .lado-izquierdo{
