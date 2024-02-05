@@ -175,6 +175,7 @@ footer{
     color: #ffffffff;
     text-decoration: none;
     width: 100%;
+    bottom: 0;
 }
 
 footer .lado-izquierdo{
@@ -216,3 +217,8 @@ footer li{
     
 }
 
+.container-inventario{
+   margin-top: 130px;
+   padding: 45px;
+   text-align: center;
+}

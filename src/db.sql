@@ -11,7 +11,7 @@ CREATE TABLE producto (
 );
 CREATE TABLE categorias (
   id int PRIMARY KEY AUTO_INCREMENT,
-  nombre varchar(64) not NULL,
+  nombre varchar(64) not NULL
 );
 CREATE TABLE users (
   id int PRIMARY KEY AUTO_INCREMENT,
@@ -27,7 +27,7 @@ INSERT INTO users (user, pass, nombre, apellido, tipoU_id) VALUES
 
 CREATE TABLE tipo_user (
   id int PRIMARY KEY AUTO_INCREMENT,
-  nombre varchar(64) not NULL,
+  nombre varchar(64) not NULL
 );
 INSERT INTO tipo_user (nombre) VALUES
 ('Admin'),
