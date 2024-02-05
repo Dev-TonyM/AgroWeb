@@ -170,13 +170,15 @@ nav .list a:hover{
 /* Footer */
 
 footer{
-    background-color: #04213e;
+    background-color: #242526;
+    position: sticky;
+    bottom: 0px;
     color: #ffffffff;
     text-decoration: none;
-    position: absolute;
-    background-color: #242526;
     width: 100%;
-
+    height: 8rem;
+    margin: 0px;
+    padding: 0px;
 }
 
 footer .lado-izquierdo{

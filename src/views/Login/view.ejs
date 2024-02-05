@@ -1,22 +1,21 @@
 <%- include('../header.ejs') %>
 <link rel="stylesheet" href="/css/login.css">
 <main id="main">
-    <form method="post" action="../index">
-        <div class="container">
-            <label for="user"><b>Username</b></label>
-            <input type="text" placeholder="Username" name="user" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Password" name="psw" required>
-            <button type="submit">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember">
-            </label>
-        </div>
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="btn-cancel">Cancelar</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-    </form>
+    <div id="fondo">
+        <form method="post" action="../index" class="formu">
+            <div class="container">
+                <label for="user"><b>Username</b></label>
+                <input type="text" placeholder="Username" name="user" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Password" name="psw" required>
+                <button type="submit" class="button-login">Login</button>
+                <button type="button" class="cancelar">Cancelar</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+            <div class="space"></div>
+        </form>
+    </div>
+    
 </main>
 
 <%- include('../footer.ejs') %>
