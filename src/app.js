@@ -12,7 +12,9 @@ const bcryptjs = require('bcryptjs')
 
 //rutas
 const routeindex = require('./routes/index');
+const routelogin = require('./routes/login.route')
 app.use ('/', routeindex);
+app.use ('/',routelogin)
 
 //sesiones
 app.use(session({
