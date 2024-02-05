@@ -2,15 +2,16 @@
 <link rel="stylesheet" href="/css/login.css">
 <main id="main">
     <div id="fondo">
-        <form method="post" action="../index" class="formu">
+        <form method="post" action="/login/auth" class="formu">
             <div class="container">
                 <label for="user"><b>Username</b></label>
-                <input type="text" placeholder="Username" name="user" required>
+                <input type="text" placeholder="Username" name="user">
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Password" name="psw" required>
+                <input type="password" placeholder="Password" name="psw">
                 <button type="submit" class="button-login">Login</button>
-                <button type="button" class="cancelar">Cancelar</button>
-                <span class="psw"> <a href="../registro">register</a></span>
+                <span aling="right">
+                    <a href="/registro" class="button-register">Registrarse </a>
+                </span>
             </div>
             <div class="space"></div>
         </form>

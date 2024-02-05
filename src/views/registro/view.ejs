@@ -1,71 +1,26 @@
-<%#  
-<form method="post" action="/registro/new">
-    <div class="container">
-        <label for="###"><b>Nombre</b></label>
-        <input type="text" placeholder="Nombre" name="name">
-        <label for="###"><b>Apellido</b></label>
-        <input type="text" placeholder="Apellido" name="lastname">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Username" name="user" required>
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Password" name="psw" required>
-        <button type="submit">Login</button>
-      </div>
-</form>
-%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
-    .container {
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    input[type="submit"] {
-      background-color: #4caf50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      width: 100%;
-    }
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h2>Register</h2>
-    <form>
-      <input type="text" placeholder="Username" required>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <input type="submit" value="Register">
-    </form>
-  </div>
-</body>
-</html>
+<%- include('../header.ejs') %>
+<link rel="stylesheet" href="/css/login.css">
+<main id="main">
+    <div id="fondo">
+        <form method="post" action="/registro" class="formu">
+            <div class="container">
+                <% if (error !=null) { %>
+                    <p><%= error %></p>
+                <% } %>
+                <label for="nombre"><b>Nombre</b></label>
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre" required>
+                <label for="apellido"><b>Apellido</b></label>
+                <input type="text" placeholder="Apellido" id="apellido" name="apellido" required>
+                <label for="user"><b>Usuario</b></label>
+                <input type="text" placeholder="Usuario" id="user" name="user" required>
+                <label for="pass"><b>Contraseña</b></label>
+                <input type="password" placeholder="Contraseña" id="pass" name="pass" required>
+                <div>
+                  <a href="/" class="button-cancelar">Cancelar</a><button type="submit" class="button-register">Registrarse</button>
+                </div>
+            </div>
+            <div class="space"></div>
+        </form>
+    </div>
+</main>
+<%- include('../footer.ejs') %>

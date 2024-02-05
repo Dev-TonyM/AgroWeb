@@ -9,7 +9,9 @@ dotenv.config({path:path.join(__dirname,'./env/.env')});
 
 //encriptador de contraseñas
 const bcryptjs = require('bcryptjs') ;
-
+//pa que pase el body
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 //rutas
 const routeindex = require('./routes/index');
 const routelogin = require('./routes/login.route');
@@ -46,12 +48,6 @@ app.use("/icons",express.static("./node_modules/bootstrap-icons"));
 app.use((req,res)=>{
   res.sendFile(path.join(__dirname,'../public/html/error.html'));
 });
-
-//aca es para poder sacar valores del formulario
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
-
-
 //servidor en escucha
 app.listen(process.env.PORT, () => {
     console.log('servidor en espera')
