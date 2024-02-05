@@ -57,7 +57,7 @@ router.get('/eliminar/:id', function(req,res) {
 router.get('/editar/:id', function(req,res) {
     inventario.buscar_inventario(req.params.id).then(producto => {
         console.log(producto);
-        res.render('inventario/editar', {producto: producto});
+        res.render('inventario/edit', {producto: producto});
     })
     .catch(err => {
         console.log(err);

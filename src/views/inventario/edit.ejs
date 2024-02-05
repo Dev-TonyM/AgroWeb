@@ -1,9 +1,9 @@
  
 
 <div class="container-agregar">
-    <h1>Agregar producto</h1>
+    <h1>Editar producto</h1>
     <form action="/inventario/editar" method="POST">
-        <% inventarios.forEach(inventario => { %>
+        <!-- <% producto.forEach(inventario => { %> -->
         <input type="hidden" name="id" value="<%= producto.id %>">
         <div class="form-group">
             <label for="codigo">Codigo</label>
@@ -33,7 +33,7 @@
             <button type="submit" class="btn btn-success">Guardar cambios</button>
             <a href="/inventario" class="btn btn-primary">Volver</a>
         </div>
-        <% }) %>
+        <!-- <% }) %> -->
     </form>
     
 </div>
