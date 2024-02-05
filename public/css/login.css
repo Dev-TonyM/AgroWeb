@@ -35,7 +35,9 @@ img.logo {
     border-radius: 50%;
 }
 .container {
+    margin-top:100px;
     padding: 16px;
+    width: 100%;
 }
 span.psw {
     float: right;
@@ -49,4 +51,13 @@ span.psw {
     .btn-cancel {
       width: 100%;
     }
+}
+
+#main{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-attachment: fixed;
+    background-size: cover;
+
 }
