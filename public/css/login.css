@@ -1,5 +1,6 @@
-form {
-    border: 3px solid #f1f1f1;
+.formu {
+    padding-top: 1px ;
+    border: 1rem transparent;
 }
 input[type=text], input[type=password] {
     width: 100%;
@@ -9,22 +10,27 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-button {
+.button-login {
     background-color: #04AA6D;
-    color: white;
+    color: rgb(253, 253, 253);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
 }
-button:hover {
-    opacity: 0.8;
+.button-login:hover {
+    background-color: #057049;
 }
-.btn-cancel {
+.cancelar {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    color: rgb(255, 255, 255);
+    background-color: #e43c30;
+    border: none;
+}
+.cancelar:hover {
+    background-color: #cf2418;
 }
 .container-img {
     text-align: center;
@@ -36,9 +42,15 @@ button:hover {
     padding: 30px;
     width: 100%;
 }
+.space {
+    margin-top:1rem;
+    padding: 3rem;
+    width: 100%;
+}
+
 span.psw {
     float: right;
-    padding-top: 16px;
+    padding-top: 1rem;
 }
 @media screen and (max-width: 300px) {
     span.psw {
@@ -50,11 +62,7 @@ span.psw {
     }
 }
 
-#main{
-    background-image: url(../img/fondo.jpg);
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-attachment: fixed;
-    background-size: cover;
+#fondo{
+    background-color: #ffffff;
 
 }
