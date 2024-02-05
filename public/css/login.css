@@ -30,12 +30,9 @@ button:hover {
     text-align: center;
     margin: 24px 0 12px 0;
 }
-img.logo {
-    width: 40%;
-    border-radius: 50%;
-}
+
 .container {
-    margin-top:100px;
+    margin-top:115px;
     padding: 16px;
     width: 100%;
 }

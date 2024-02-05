@@ -1,3 +1,33 @@
 <%- include ('../header.ejs') %>
+<div class="container-inventario">
+    <h1>INVENTARIO</h1>
 
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Marca</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% inventario.forEach(inventario => { %>
+            <tr>
+                <td><%= agricola.id %></td>
+                <td><%= agricola.codigo %></td>
+                <td><%= agricola.nombre %></td>
+                <td><%= agricola.precio %></td>
+                <td><%= categorias.nombre %></td>
+                <td><%= agricola.marca %></td>
+                <td><%= agricola.stock %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+<a href="/inventario/add" class="ntn btn btn-primary mb-2">Agregar producto</a>
 <%- include ('../footer.ejs') %>
