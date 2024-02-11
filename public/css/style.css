@@ -175,6 +175,7 @@ footer{
     color: #ffffffff;
     text-decoration: none;
     width: 100%;
+    bottom: 0;
 }
 
 footer .lado-izquierdo{
